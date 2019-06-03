@@ -1,0 +1,48 @@
+{
+	"name": "helloworld-sample",
+	"displayName": "helloworld-sample",
+	"description": "HelloWorld example for VS Code",
+	"version": "0.0.1",
+	"publisher": "vscode-samples",
+	"repository": "https://github.com/Microsoft/vscode-extension-samples/helloworld-sample",
+	"engines": {
+		"vscode": "^1.34.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onLanguage:cpp"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"languages": [
+			{
+				"id": "cpp",
+				"aliases": [
+					"CPP",
+					"c++"
+				],
+				"extensions": [
+					".CPP",
+					".cpp"
+				]
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc  -p ./",
+		"lint": "tslint -p ./",
+		"watch": "tsc -watch -p ./"
+	},
+	"devDependencies": {
+		"@types/node": "^8.10.25",
+		"@types/vscode": "^1.34.0",
+		"tslint": "^5.16.0",
+		"typescript": "^3.4.5"
+	},
+	"dependencies": {
+		"shelljs": "^0.8.3"
+	}
+}
